@@ -1,0 +1,59 @@
+{
+  "name": "dsh-sys-status",
+  "version": "0.1.0",
+  "description": "CPU, memory and network speed in a draggable pill at the top of the DeepSeek Harness Web GUI.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/client.js",
+    "lib/index.js",
+    "cordis.patch.yml",
+    "README.md",
+    "docs/preview.png",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "status-bar",
+    "monitor",
+    "cpu",
+    "memory",
+    "network",
+    "hud"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "preview": "node scripts/preview.mjs",
+    "check": "node scripts/behaviour-check.mjs"
+  },
+  "license": "MIT",
+  "author": "EndlessGr1ef",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EndlessGr1ef/dsh-sys-status.git"
+  },
+  "homepage": "https://github.com/EndlessGr1ef/dsh-sys-status#readme",
+  "bugs": {
+    "url": "https://github.com/EndlessGr1ef/dsh-sys-status/issues"
+  }
+}

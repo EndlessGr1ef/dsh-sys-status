@@ -1,0 +1,5 @@
+node_modules/
+.harness.html
+preview.html
+.DS_Store
+*.log
